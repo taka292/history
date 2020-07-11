@@ -72,8 +72,8 @@ return redirect('admin/news/create');
       $news->fill($news_form)->save();
 
       $history = new History;
-      $history->news_id = $news-id;
-      $history->editted_at = Carbon::now();
+      $history->news_id = $news->id;
+      $history->edited_at = Carbon::now();
       $history->save();
       
       
